@@ -1,0 +1,184 @@
+.contact-page {
+  padding-top: 80px;
+}
+
+/* --- Section CTA Orange --- */
+.cta-section {
+  background-color: #f1f5f9; /* Orange vif de ton image */
+  padding: 100px 20px;
+  text-align: center;
+  color: #000;
+  position: relative;
+}
+
+.cta-content h1 {
+  font-family: serif;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.cta-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-black, .btn-white {
+  padding: 18px 45px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.btn-black {
+  background: #000;
+  color: #fff;
+}
+
+.btn-white {
+  background:yellow;
+  color: #000;
+}
+
+.btn-black:hover, .btn-white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- Section Nous Trouver --- */
+.find-us-section {
+  background-color:white;
+  color: black;
+  padding: 80px 5%;
+}
+
+.find-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.contact-details h2 {
+  font-family: serif;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.info-item i {
+  color: rgb(167, 167, 34);
+  font-size: 1.4rem;
+  margin-top: 5px;
+}
+
+.social-links-minimal {
+  display: flex;
+  gap: 30px;
+  font-size: 1.8rem;
+}
+
+.social-links-minimal a {
+  color: rgb(167, 167, 34);
+  transition: 0.3s;
+}
+
+.social-links-minimal a:hover {
+  color: black;
+}
+
+/* --- Carte Placeholder --- */
+.map-placeholder {
+  position: relative;
+  height: 500px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.map-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: rgba(0,0,0,0.2);
+}
+
+.map-overlay i {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.map-overlay span {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+/* --- WhatsApp Float --- */
+.whatsapp-floating {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .find-us-container { grid-template-columns: 1fr; }
+  .cta-content h1 { font-size: 2.5rem; }
+  .cta-buttons { flex-direction: column; }
+}
+
+.map-placeholder:hover img {
+  filter: grayscale(0%) brightness(0.8);
+  transform: scale(1.03);
+}

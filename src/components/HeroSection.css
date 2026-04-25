@@ -1,0 +1,144 @@
+:root {
+  --primary-orange: yellow; /* Un orange vif pour les boutons */
+  --highlight-gold: yellow; /* Un doré pour 'Gastronomique' */
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px); /* Hauteur totale moins le navbar (supposé 80px) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif; /* Ou Cinzel, pour le titre */
+}
+
+/* Diaporama */
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0; /* Caché par défaut */
+  transition: opacity 1.5s ease-in-out; /* Effet de fondu croisé fluide */
+  z-index: 1;
+}
+
+.hero-slide.active {
+  opacity: 1; /* Visible quand actif */
+  z-index: 2; /* S'affiche au-dessus */
+}
+
+/* Superposition sombre */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)); /* Dégradé pour le contraste */
+  z-index: 3;
+}
+
+/* Contenu */
+.hero-content {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 3rem; /* Ajustez selon vos besoins */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.hero-title .highlight {
+  color: var(--highlight-gold); /* La couleur dorée pour Gastronomique */
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  font-family: sans-serif; /* Plus lisible pour le texte long */
+  font-weight: 300;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Boutons */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 30px; /* Plus arrondis pour correspondre à l'image */
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s, background-color 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--primary-orange);
+  color: black;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: white; /* Version plus sombre de l'orange */
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white; /* Ou utiliser un style 'glassmorphism' avec un fond semi-transparent */
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Responsive (Mobile max 768px) --- */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: calc(100vh - 60px); /* Ajuster la hauteur mobile */
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Boutons l'un au-dessus de l'autre */
+    gap: 15px;
+  }
+}

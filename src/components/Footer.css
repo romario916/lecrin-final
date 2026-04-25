@@ -1,0 +1,172 @@
+.footer {
+  background-color: #050a12;
+  color: #94a3b8;
+  padding: 80px 0 30px 0;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 50px;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-column h3 {
+  color: yellow;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.footer-logo {
+  color: yellow;
+  font-family: serif;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.footer-column p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  max-width: 350px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+  background-color: yellow;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* Responsivité Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  .footer-column p, .social-icons {
+    margin: 0 auto 25px auto;
+    justify-content: center;
+  }
+}
+
+
+
+
+/* --- Section Contact (Téléphone, Mail, Adresse) --- */
+.contact-info {
+  margin: 25px 0;
+  display: flex;
+  position: relative;
+  left: 130px; /* Décalage vers la gauche pour aligner avec les autres éléments */
+  flex-direction: column;
+  gap: 18px; /* Espace entre chaque ligne de contact */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.contact-item span {
+  line-height: 1.2;
+}
+
+/* Effet au survol sur toute la ligne */
+.contact-item:hover span {
+  color: #ffffff;
+}
+
+/* --- Adaptation des Icônes --- */
+.contact-item .social-link {
+  /* On réutilise tes styles de cercles existants */
+  flex-shrink: 0; /* Empêche l'icône de s'écraser si le texte est long */
+  width: 38px;
+  height: 38px;
+}
+
+/* --- RESPONSIVE : Mobile et Tablettes --- */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    text-align: center;
+    gap: 40px;
+  }
+
+  .contact-info {
+    align-items: center; /* Centre les infos de contact sur mobile */
+  }
+
+  .contact-item {
+    flex-direction: column; /* Icône au-dessus du texte sur petit écran */
+    gap: 8px;
+  }
+
+  .footer-column p {
+    margin: 0 auto 20px auto; /* Centre la description */
+  }
+
+  .social-icons {
+    justify-content: center; /* Centre les réseaux sociaux */
+  }
+}
