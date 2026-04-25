@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './HeroSection.css';
-
+import { NavLink } from 'react-router-dom';
 const images = [
   '/images/hero1.jpg',
   '/images/hero2.jpg',
@@ -47,8 +47,12 @@ const HeroSection = () => {
           Découvrez une cuisine raffinée alliant tradition SAKALAVA et touches contemporaines, au cœur d'un écrin de modernité.
         </p>
         <div className="hero-buttons">
-          <a href="/contact" className="btn btn-primary">Au Contact</a>
-          <a href="/menu" className="btn btn-secondary">Consulter la Carte</a>
+          <NavLink to="/menu" className="btn btn-primary">
+            MENU
+          </NavLink>
+          <NavLink to="/contact" className="btn btn-secondary">
+            Au Contact
+          </NavLink>
         </div>
       </div>
     </section>
