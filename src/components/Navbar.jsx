@@ -30,7 +30,7 @@ const Navbar = () => {
 
         {/* Bouton CTA WhatsApp */}
         <div className="nav-actions">
-          <a href="https://wa.me/261324182826" className="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <a href="https://api.whatsapp.com/send?phone=261324182826" className="btn-whatsapp" target="_blank" rel="noopener noreferrer">
             WHATSAPP
           </a>
         </div>

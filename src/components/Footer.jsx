@@ -10,7 +10,7 @@ const Footer = () => {
         
         {/* Colonne 1 : Branding */}
         <div className="footer-column about">
-          <h2 className="footer-logo">L'ÉCRIN</h2>
+          <h2 className="footer-logo">Vohemar Iharanga</h2>
           <p>
             Une table audacieuse et authentique. Nous transformons les meilleurs 
             produits pour vous offrir une expérience culinaire unique.
