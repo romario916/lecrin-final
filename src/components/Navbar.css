@@ -91,8 +91,14 @@
 
 /* Mobile & Hamburger */
 .hamburger {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
   cursor: pointer;
+  position: relative; /* Important pour le positionnement des barres */
+  z-index: 10;
 }
 
 .bar {
@@ -102,6 +108,42 @@
   margin: 5px;
   background-color: white;
   transition: 0.4s;
+}
+
+/* --- Animation vers le X --- */
+
+/* La barre du haut s'incline à 45 degrés */
+.bar.open:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+/* La barre du milieu disparaît */
+.bar.open:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+/* La barre du bas s'incline à -45 degrés */
+.bar.open:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Cache le menu par défaut */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Affiche le menu quand isOpen est vrai */
+  }
 }
 
 @media (max-width: 1024px) {
@@ -124,4 +166,23 @@
   .hamburger { display: block; }
   
   .nav-actions { display: none; } /* On peut cacher le gros bouton sur petit mobile */
+}
+
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    /* ... tes autres réglages ... */
+    transition: all 0.3s ease-in-out; 
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    display: flex; 
+  }
 }

@@ -5,6 +5,11 @@ import './Navbar.css';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Cette fonction va forcer la fermeture du menu
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -16,11 +21,11 @@ const Navbar = () => {
 
         {/* Liens de Navigation */}
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
-          <li><NavLink to="/">ACUILLE</NavLink></li>
-          <li><NavLink to="/menu">MENU</NavLink></li>
-          <li><NavLink to="/apropos">À PROPOS</NavLink></li>
-          <li><NavLink to="/chambres">CHAMBRES</NavLink></li>
-           <li><NavLink to="/contact">CONTACT</NavLink></li>
+         <li><NavLink to="/" onClick={closeMenu}>ACCUEIL</NavLink></li>
+          <li><NavLink to="/menu" onClick={closeMenu}>MENU</NavLink></li>
+          <li><NavLink to="/apropos" onClick={closeMenu}>À PROPOS</NavLink></li>
+          <li><NavLink to="/chambres" onClick={closeMenu}>CHAMBRES</NavLink></li>
+          <li><NavLink to="/contact" onClick={closeMenu}>CONTACT</NavLink></li>
         </ul>
 
         {/* Bouton CTA WhatsApp */}
