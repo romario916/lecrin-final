@@ -16,7 +16,7 @@ const ContactPage = () => {
         </div>
         
         {/* Bulle flottante WhatsApp (optionnelle) */}
-        <a href="https://wa.me/33123456789" className="whatsapp-floating">
+        <a href="https://api.whatsapp.com/send?phone=261326910503" className="btn-white" target="_blank" rel="noopener noreferrer">
           <i className="fa-brands fa-whatsapp"></i>
         </a>
       </section>
