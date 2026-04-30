@@ -11,7 +11,7 @@ const ContactPage = () => {
           
           <div className="cta-buttons">
             <a href="https://www.facebook.com/profile.php?id=61586754389229" className="btn-black">DISCUTONS</a>
-            <a href="https://wa.me/261326910503" className="btn-white" target="_blank" rel="noopener noreferrer">WHATSAPP</a>
+            <a href="https://api.whatsapp.com/send?phone=261324182826" className="btn-white" target="_blank" rel="noopener noreferrer">WHATSAPP</a>
           </div>
         </div>
         
